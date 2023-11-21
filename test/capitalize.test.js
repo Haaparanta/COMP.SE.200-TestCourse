@@ -3,18 +3,18 @@ import capitalize from '../src/capitalize.js';
 
 describe('Capitalize', () => {
 
-  test('Capitalizes basic string', () => {
+  it('Capitalizes basic string', () => {
     expect(capitalize('hello')).toBe('Hello');
     expect(capitalize('Hello')).toBe('Hello');
   });
 
-  test('String with Uppercase Characters', () => {
+  it('String with Uppercase Characters', () => {
     expect(capitalize('hELLO')).toBe('Hello');
     expect(capitalize('HELLO')).toBe('Hello');
     expect(capitalize('HeLlO')).toBe('Hello');
   });
 
-  test('String with special characters', () => {
+  it('String with special characters', () => {
     expect(capitalize('hello!')).toBe('Hello!');
     expect(capitalize('hello!')).toBe('Hello!');
     expect(capitalize('hello?')).toBe('Hello?');
@@ -23,70 +23,70 @@ describe('Capitalize', () => {
     expect(capitalize('hello.')).toBe('Hello.');
   });
 
-  test('Empty String', () => {
+  it('Empty String', () => {
     expect(capitalize('')).toBe('');
   });
 
-  test('String with Leading Spaces', () => {
+  it('String with Leading Spaces', () => {
     expect(capitalize(' hello')).toBe(' Hello');
     expect(capitalize('  hello')).toBe('  Hello');
   });
 
-  test('String with Trailing Spaces', () => {
+  it('String with Trailing Spaces', () => {
     expect(capitalize('hello ')).toBe('Hello ');
     expect(capitalize('hello  ')).toBe('Hello  ');
   });
 
-  test('String with Leading and Trailing Spaces', () => {
+  it('String with Leading and Trailing Spaces', () => {
     expect(capitalize(' hello ')).toBe(' Hello ');
     expect(capitalize('  hello  ')).toBe('  Hello  ');
   });
 
-  test('String with a single character', () => {
+  it('String with a single character', () => {
     expect(capitalize('h')).toBe('H');
     expect(capitalize('H')).toBe('H');
   });
 
-  test('String with a sentence', () => {
+  it('String with a sentence', () => {
     expect(capitalize('hello world')).toBe('Hello world');
     expect(capitalize('Hello world')).toBe('Hello world');
   });
 
-  test('String with a numbers', () => {
+  it('String with a numbers', () => {
     expect(capitalize('hello 123')).toBe('Hello 123');
     expect(capitalize('Hello 123')).toBe('Hello 123');
     expect(capitalize('123 hello')).toBe('123 hello');
   });
 
-  test('Null', () => {
+  it('Null', () => {
     expect(capitalize(null)).toBe('');
   });
 
-  test('Undefined', () => {
+  it('Undefined', () => {
     expect(capitalize(undefined)).toBe('');
   });
 
-  test('Boolean', () => {
+  it('Boolean', () => {
     expect(capitalize(true)).toBe('');
     expect(capitalize(false)).toBe('');
   });
 
-  test('Object', () => {
+  it('Object', () => {
     expect(capitalize({})).toBe('');
   });
 
-  test('Array', () => {
+  it('Array', () => {
     expect(capitalize([])).toBe('');
     expect(capitalize(['hello'])).toBe('hello');
     expect(capitalize([1, 2, 3])).toBe('123');
   });
 
-  test('Number', () => {
+  it('Number', () => {
     expect(capitalize(123)).toBe('');
     expect(capitalize(123)).toBe('');
   });
 
-  test('Function', () => {
+  it('Function', () => {
     expect(capitalize(() => {})).toBe('');
   });
   

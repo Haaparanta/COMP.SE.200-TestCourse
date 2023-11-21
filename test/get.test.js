@@ -1,9 +1,9 @@
-import get from '../src/get.js';
+//import get from '../src/get.js';
 
 
 describe('get', () => {
 
-  it('Placeholder test', () => {
+  it('Placeholder', () => {
       expect(true).toBe(true);
   });
 });

@@ -1,9 +1,9 @@
-import toNumber from "../src/toNumber";
+//import toNumber from "../src/toNumber";
 
 
 describe('toNumber', () => {
 
-  it('Placeholder test', () => {
+  it('Placeholder', () => {
       expect(true).toBe(true);
   });
 });

@@ -1,9 +1,9 @@
-import drop from '../src/drop.js';
+//import drop from '../src/drop.js';
 
 
 describe('drop', () => {
 
-  it('Placeholder test', () => {
+  it('Placeholder', () => {
       expect(true).toBe(true);
   });
 });

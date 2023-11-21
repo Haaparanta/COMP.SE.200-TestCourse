@@ -1,9 +1,9 @@
-import isObjectLike from "../src/isObjectLike";
+//import isObjectLike from "../src/isObjectLike";
 
 
 describe('isObjectLike', () => {
 
-  it('Placeholder test', () => {
+  it('Placeholder', () => {
       expect(true).toBe(true);
   });
 });

@@ -1,9 +1,9 @@
-import filter from '../src/filter.js';
+//import filter from '../src/filter.js';
 
 
 describe('filter', () => {
 
-  it('Placeholder test', () => {
+  it('Placeholder', () => {
       expect(true).toBe(true);
   });
 });
