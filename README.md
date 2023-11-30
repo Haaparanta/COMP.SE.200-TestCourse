@@ -1,8 +1,10 @@
-# Student template
+# COMP.SE.200 | Software Testing project
+
+[![Coverage Status](https://coveralls.io/repos/github/Haaparanta/COMP.SE.200-TestCourse/badge.svg?branch=main)](https://coveralls.io/github/Haaparanta/COMP.SE.200-TestCourse?branch=main)
 
 ## Purpose of this repository
 
-This is a project template for students participating in Software Testing course
+This is based on a project template for students participating in Software Testing course
 at Tampere University.
 
 The repository only contains the source code that is under testing, `package.json` skeleton
