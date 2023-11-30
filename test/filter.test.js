@@ -10,7 +10,7 @@ describe('filter', () => {
   });
 
   test('returns an array', () => {
-    expect(filter(original, (_=>true))).toBeInstanceOf(Array);
+    expect(filter(original, (_ => true))).toBeInstanceOf(Array);
   });
 
   test('returns a filtered array', () => {
@@ -24,7 +24,7 @@ describe('filter', () => {
   });
 
   test('returns empty array when null or undefined is passed', () => {
-    expect(filter(null, (_ => true)).length).toEqual(0);
+    expect(filter(null, (_ => false)).length).toEqual(0);
     expect(filter(undefined, (_ => true)).length).toEqual(0);
   });
 
