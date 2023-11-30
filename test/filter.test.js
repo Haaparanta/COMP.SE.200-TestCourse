@@ -1,11 +1,11 @@
 import filter from '../src/filter.js';
 
-
 describe('filter', () => {
   let original = [];
 
   beforeEach(() => {
     // Create array of [0..n] where n is in [10..19]
+    // Unnecessary, but cool.
     original = [...Array(Math.floor((Math.random() + 1) * 10)).keys()];
   });
 

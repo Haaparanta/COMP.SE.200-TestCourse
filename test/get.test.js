@@ -15,6 +15,7 @@ describe('get', () => {
 
   beforeEach(() => {
     // Assign random values before each test.
+    // Unnecessary, but cool.
     testObject.a[0].a = (Math.random() * 10).toString();
     testObject.a[1].a = (Math.random() * 10);
     testObject.b.a    = (Math.random() < 0.5);
