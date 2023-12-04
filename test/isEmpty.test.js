@@ -42,6 +42,3 @@ describe('isEmpty', () => {
         expect(isEmpty({})).toBe(true);
     });
 });
-
-
-

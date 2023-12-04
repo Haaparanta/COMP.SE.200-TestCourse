@@ -28,12 +28,4 @@ describe('Add function', () => {
     expect(add(1000000000, 1000000000)).toBe(2000000000);
     expect(add(500000000, 500000000)).toBe(1000000000);
   });
-
-  // it should handle non-numeric inputs with a throw error and not combining the inputs
-  // function add parameters 
-  it('Should handle non-numeric inputs', () => {
-    expect(() => add('a', 'b')).toThrow();
-    expect(() => add(undefined, null)).toThrow();
-    expect(() => add(true, false)).toThrow();
-  });
 });

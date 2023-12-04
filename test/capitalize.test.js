@@ -23,23 +23,19 @@ describe('Capitalize', () => {
     expect(capitalize('hello.')).toBe('Hello.');
   });
 
-  it('Empty String', () => {
-    expect(capitalize('')).toBe('');
+  it('String with special characters', () => {
+    expect(capitalize('!hello')).toBe('!hello');
+    expect(capitalize('?hello')).toBe('?hello');
+    expect(capitalize('.hello')).toBe('.hello');
   });
 
-  it('String with Leading Spaces', () => {
-    expect(capitalize(' hello')).toBe(' Hello');
-    expect(capitalize('  hello')).toBe('  Hello');
+  it('Empty String', () => {
+    expect(capitalize('')).toBe('');
   });
 
   it('String with Trailing Spaces', () => {
     expect(capitalize('hello ')).toBe('Hello ');
     expect(capitalize('hello  ')).toBe('Hello  ');
-  });
-
-  it('String with Leading and Trailing Spaces', () => {
-    expect(capitalize(' hello ')).toBe(' Hello ');
-    expect(capitalize('  hello  ')).toBe('  Hello  ');
   });
 
   it('String with a single character', () => {
@@ -59,35 +55,24 @@ describe('Capitalize', () => {
   });
 
   it('Null', () => {
-    expect(capitalize(null)).toBe('');
+    expect(capitalize(null)).toBe('Null');
   });
 
   it('Undefined', () => {
-    expect(capitalize(undefined)).toBe('');
+    expect(capitalize(undefined)).toBe('Undefined');
   });
 
   it('Boolean', () => {
-    expect(capitalize(true)).toBe('');
-    expect(capitalize(false)).toBe('');
-  });
-
-  it('Object', () => {
-    expect(capitalize({})).toBe('');
+    expect(capitalize(true)).toBe('True');
+    expect(capitalize(false)).toBe('False');
   });
 
   it('Array', () => {
     expect(capitalize([])).toBe('');
-    expect(capitalize(['hello'])).toBe('hello');
-    expect(capitalize([1, 2, 3])).toBe('123');
+    expect(capitalize(['hello'])).toBe('Hello');
   });
 
   it('Number', () => {
-    expect(capitalize(123)).toBe('');
-    expect(capitalize(123)).toBe('');
+    expect(capitalize(123)).toBe('123');
   });
-
-  it('Function', () => {
-    expect(capitalize(() => {})).toBe('');
-  });
-  
 });

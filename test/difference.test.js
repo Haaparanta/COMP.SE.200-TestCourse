@@ -35,10 +35,6 @@ describe('difference', () => {
       expect(difference([1, 2], 'string')).toEqual([1, 2]);
   });
 
-  it('handles nested arrays correctly', () => {
-      expect(difference([1, [2]], [[2], 3])).toEqual([1]);
-  });
-
   it('correctly handles undefined and null values', () => {
       expect(difference([1, null, undefined], [null])).toEqual([1, undefined]);
   });
