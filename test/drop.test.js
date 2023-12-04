@@ -27,6 +27,14 @@ describe('drop', () => {
     expect(drop(arr, 0)).toEqual(arr);
   });
 
+  test('drops no value when < 0 is passed', () => {
+    let n = Math.floor((Math.random() + 1) * 10);
+    // Multiplier to make n * p size array.
+    let p = Math.floor((Math.random() + 1) * 10);
+    let arr = [...Array(n * p).keys()];
+    expect(drop(arr, -n)).toEqual(arr);
+  })
+
   test('doesn\'t modify original array', () => {
     let n = Math.floor((Math.random() + 1) * 10);
     // Multiplier to make n * p size array.
