@@ -2,10 +2,16 @@ import capitalize from '../src/capitalize.js';
 
 
 describe('Capitalize', () => {
+  // ******************** Successful tests ********************
 
   it('Capitalizes basic string', () => {
     expect(capitalize('hello')).toBe('Hello');
     expect(capitalize('Hello')).toBe('Hello');
+  });
+
+  it('Capitalizes string with spaces', () => {
+    expect(capitalize('hello world')).toBe('Hello world');
+    expect(capitalize('Hello world')).toBe('Hello world');
   });
 
   it('String with Uppercase Characters', () => {
@@ -43,28 +49,10 @@ describe('Capitalize', () => {
     expect(capitalize('H')).toBe('H');
   });
 
-  it('String with a sentence', () => {
-    expect(capitalize('hello world')).toBe('Hello world');
-    expect(capitalize('Hello world')).toBe('Hello world');
-  });
-
   it('String with a numbers', () => {
     expect(capitalize('hello 123')).toBe('Hello 123');
     expect(capitalize('Hello 123')).toBe('Hello 123');
     expect(capitalize('123 hello')).toBe('123 hello');
-  });
-
-  it('Null', () => {
-    expect(capitalize(null)).toBe('Null');
-  });
-
-  it('Undefined', () => {
-    expect(capitalize(undefined)).toBe('Undefined');
-  });
-
-  it('Boolean', () => {
-    expect(capitalize(true)).toBe('True');
-    expect(capitalize(false)).toBe('False');
   });
 
   it('Array', () => {
@@ -74,5 +62,18 @@ describe('Capitalize', () => {
 
   it('Number', () => {
     expect(capitalize(123)).toBe('123');
+  });
+
+  it('Null', () => {
+    expect(capitalize(null)).toBe('Null'); // I think null should throw an error
+  });
+
+  it('Undefined', () => {
+    expect(capitalize(undefined)).toBe('Undefined'); // I think undefined should throw an error
+  });
+
+  it('Boolean', () => {
+    expect(capitalize(true)).toBe('True'); // I think boolean should throw an error
+    expect(capitalize(false)).toBe('False'); // I think boolean should throw an error
   });
 });
