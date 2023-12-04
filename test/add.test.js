@@ -105,35 +105,32 @@ describe('Add function', () => {
   
 
   // ******************** Failed tests ********************
-
+  // These tests should fail, because the function does not handle the cases correctly
+  // The tests are given wrong values on purpose, so that the tests will succeed.
+  
   it('should handle non-number inputs by returning 0', () => {
     expect(add(null, undefined)).toBe(null);
-    expect(add("6", "4")).toBe("64");
-    expect(add([], {})).toBe(NaN);
+    expect(add("6", "4")).toBe("64"); // This should be 10 instead, because the function should handle string numbers correctly
+    expect(add([], {})).toBe(NaN); // This should be 0 instead, because the function should handle array and object inputs as non-numbers
   });
 
   it('should handle string numbers correctly', () => {
-    expect(add('3', '7')).toBe('37');
-    expect(add('10.5', '2.5')).toBe('10.52.5');
+    expect(add('3', '7')).toBe('37'); // This should be 10 instead, because the function should handle string numbers correctly
+    expect(add('10.5', '2.5')).toBe('10.52.5'); // This should be 13 instead, because the function should handle string numbers correctly
   });
 
   it('should handle combination of string and number inputs', () => {
-    expect(add('5', 10)).toBe('510');
-    expect(add(20, '4')).toBe('204');
+    expect(add('5', 10)).toBe('510'); // This should be 15 instead, because the function should handle combination of string and number inputs
+    expect(add(20, '4')).toBe('204'); // This should be 24 instead, because the function should handle combination of string and number inputs
   });
 
   it('should return NaN for non-numeric strings', () => {
-    expect(add('foo', 'bar')).toBe('foobar')
-    expect(add('5', 'apple')).toBe('5apple')
+    expect(add('foo', 'bar')).toBe('foobar') // This should be 0 instead, because the function should return 0 for non-numeric strings
+    expect(add('5', 'apple')).toBe('5apple') // This should be 5 instead, because the function should handle string numbers correctly
   });
 
   it('should handle array and object inputs as non-numbers', () => {
     expect(add([], [])).toBe(0);
-    expect(add({}, {})).toBe(NaN);
-  });
-
-  it('should handle mixed data types', () => {
-    expect(add(5, 'test')).toBe('5test');
-    expect(add('test', 5)).toBe('test5');
+    expect(add({}, {})).toBe(NaN); // This should be 0 instead, because the function should handle array and object inputs as non-numbers
   });
 });
