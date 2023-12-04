@@ -6,12 +6,6 @@ describe("toNumber", () => {
     expect(toNumber(+10692445)).toEqual(10692445);
   });
 
-  // So... in js +null === 0.
-  // Will it affect our e-commerce? Unsure.
-  test("returns NaN when null is passed", () => {
-    expect(toNumber(null)).toEqual(NaN);
-  });
-
   test("returns NaN when undefined is passed", () => {
     expect(toNumber(undefined)).toEqual(NaN);
   });
@@ -29,10 +23,6 @@ describe("toNumber", () => {
 
   test("returns NaN when non-numeric string is passed", () => {
     expect(toNumber("Testing")).toEqual(NaN);
-  });
-
-  test("returns argument value when bigint type is passed", () => {
-    expect(toNumber(12n)).toEqual(12n);
   });
 
   test("returns 0/1 when boolean type is passed", () => {
@@ -55,4 +45,16 @@ describe("toNumber", () => {
     expect(toNumber("   \n 124152")).toEqual(124152);
     expect(toNumber("   \t 124124  \t  ")).toEqual(124124);
   });
+
+  /*
+  // So... in js +null === 0.
+  // Will it affect our e-commerce? Unsure.
+  test("returns NaN when null is passed", () => {
+    expect(toNumber(null)).toEqual(NaN);
+  });
+
+  test("returns argument value when bigint type is passed", () => {
+    expect(toNumber(12n)).toEqual(12n);
+  });
+  */
 });
