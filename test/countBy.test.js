@@ -2,7 +2,7 @@ import countBy from "../src/countBy.js";
 
 //
 // I think that it is silly that countBy return 0 for value that is 1 time in the collection. I think that it should return 1.
-// 
+//
 describe("countBy", () => {
   // ******************** Successful tests ********************
   it("returns an empty object for an empty array", () => {
