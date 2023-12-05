@@ -46,7 +46,6 @@ describe("toNumber", () => {
     expect(toNumber("   \t 124124  \t  ")).toEqual(124124);
   });
 
-  /*
   // So... in js +null === 0.
   // Will it affect our e-commerce? Unsure.
   test("returns NaN when null is passed", () => {
@@ -56,5 +55,4 @@ describe("toNumber", () => {
   test("returns argument value when bigint type is passed", () => {
     expect(toNumber(12n)).toEqual(12n);
   });
-  */
 });

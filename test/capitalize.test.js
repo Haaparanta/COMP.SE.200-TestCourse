@@ -1,8 +1,6 @@
 import capitalize from "../src/capitalize.js";
 
 describe("Capitalize", () => {
-  // ******************** Successful tests ********************
-
   it("Capitalizes basic string", () => {
     expect(capitalize("hello")).toBe("Hello");
     expect(capitalize("Hello")).toBe("Hello");
@@ -63,16 +61,19 @@ describe("Capitalize", () => {
     expect(capitalize(123)).toBe("123");
   });
 
+  // I think these should throw errors
+  // Because if we have a website and there happens a error somewhere else and undefined or null is passed to this function
+  // It should not just return Undefined or Null, but throw an error  
   it("Null", () => {
-    expect(capitalize(null)).toBe("Null"); // I think null should throw an error
+    expect(capitalize(null)).toThrow() // I think null should throw an error
   });
 
   it("Undefined", () => {
-    expect(capitalize(undefined)).toBe("Undefined"); // I think undefined should throw an error
+    expect(capitalize(undefined)).toThrow(); // I think undefined should throw an error
   });
 
   it("Boolean", () => {
-    expect(capitalize(true)).toBe("True"); // I think boolean should throw an error
-    expect(capitalize(false)).toBe("False"); // I think boolean should throw an error
+    expect(capitalize(true)).toThrow(); // I think boolean should throw an error
+    expect(capitalize(false)).toThrow(); // I think boolean should throw an error
   });
 });

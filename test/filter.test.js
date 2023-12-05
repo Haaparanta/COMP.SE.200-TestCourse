@@ -31,7 +31,6 @@ describe("filter", () => {
     expect(filter(original, (_) => true)).toEqual(original);
   });
 
-  /*
   test("returns an empty array when one is passed", () => {
     // Neither pass
     // expect(filter([], (_ => true))).toEqual([]);
@@ -42,5 +41,4 @@ describe("filter", () => {
     expect(filter(null, (_) => false).length).toEqual(0);
     expect(filter(undefined, (_) => true).length).toEqual(0);
   });
-  */
 });

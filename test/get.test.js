@@ -67,10 +67,9 @@ describe("get", () => {
     expect(get(testObject, null)).toBeUndefined();
   });
 
-  /*
   test("returned value maintains value type", () => {
     expect(get(testObject, "a")).toBeInstanceOf(Object);
-    This test doesn't work, but it isn't due to the function failing, but the
+    //This test doesn't work, but it isn't due to the function failing, but the
     //string (Math.random() * 10).toString() returns fails
     //toBeInstanceOf(String) assertion for some reason.
     //    expect(get(testObject, 'a[0].a')).toBeInstanceOf(String);
@@ -81,5 +80,4 @@ describe("get", () => {
     expect(get(testObject, "d")).toBeInstanceOf(undefined);
     expect(get(testObject, "e")).toBeInstanceOf(BigInt);
   });
-  */
 });
