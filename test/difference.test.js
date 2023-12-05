@@ -36,4 +36,27 @@ describe("difference", () => {
   it("correctly handles undefined and null values", () => {
     expect(difference([1, null, undefined], [null])).toEqual([1, undefined]);
   });
+
+  test('difference returns correct elements', () => {
+    expect(difference([2, 1], [2, 3])).toEqual([1]);
+  });
+
+  test('difference works with multiple exclusion arrays', () => {
+    expect(difference([2, 1, 3, 4], [2, 3], [4, 5])).toEqual([1]);
+  });
+  
+  test('difference returns an empty array if the first array is empty', () => {
+    expect(difference([], [2, 3])).toEqual([]);
+  });
+  
+  const customComparator = (a, b) => a === b;
+  test('Difference with custom comparator', () => {
+    expect(difference([2.1, 1.2], [2.3, 3.4], undefined, customComparator)).toEqual([2.1, 1.2]);
+  });
+
+  const square = n => n * n;
+  test('Difference using map function', () => {
+    expect(difference([4, 8], [2, 3], square)).toEqual([16, 64]);
+  });
+
 });
